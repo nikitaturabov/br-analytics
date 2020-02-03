@@ -1,0 +1,74 @@
+.br-checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .br-checkbox__conditions {
+      &:before {
+        border: 1px solid #e43898;
+      }
+    }
+  }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 9px;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &__conditions {
+    max-width: 477px;
+
+    font-size: 14px;
+    line-height: 20px;
+    display: block;
+    padding: 1px 0 1px 36px;
+
+    &:focus + label::before {
+      outline: rgb(59, 153, 252) auto 5px;
+    }
+
+    a {
+      color: #e43898;
+    }
+
+    &::before {
+      width: 19px;
+      height: 19px;
+      border-radius: 4px;
+      border: solid 1px #7f8d9c;
+      position: absolute;
+      top: 1px;
+      left: 0;
+      content: "";
+
+      &:focus {
+        border: 1px solid #e43898;
+      }
+    }
+  }
+
+  &__input:checked + &__conditions:before {
+    background-color: #e43898;
+    border-color: #e43898;
+  }
+
+  &__input:checked + &__conditions::after {
+    position: absolute;
+    top: 7px;
+    left: 0px;
+    width: 20px;
+    height: 19px;
+    content: "";
+    background: url("../stack/sprite.svg#bird--white") no-repeat;
+  }
+
+  &--error &__conditions:before {
+    border-color: var(--error);
+  }
+}

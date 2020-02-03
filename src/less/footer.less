@@ -1,0 +1,67 @@
+.br-footer {
+  &__left,
+  &__right {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__left {
+    align-items: flex-start;
+
+    padding: 0px 0px 0px 100px;
+  }
+  &__right {
+    align-items: flex-end;
+
+    padding: 0px 100px;
+  }
+
+  &__check-us {
+    color: #0f2135;
+    font-size: 22px;
+
+    max-width: 523px;
+  }
+  &__news {
+    font-size: 14px;
+    color: #7f8d9c;
+
+    margin-top: 65px;
+  }
+
+  &__email {
+    width: 100%;
+    border-radius: 8px;
+    border: solid 1px #7f8d9c;
+    padding: 12px 20px;
+    outline: none;
+
+    color: #0f2135;
+
+    &::placeholder {
+      color: #7f8d9c;
+    }
+  }
+
+  &__checkbox {
+    margin-top: 27px;
+    align-self: flex-start;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: flex-start;
+
+    align-self: flex-start;
+
+    margin-top: 32px;
+  }
+
+  &__btn {
+    &:last-child {
+      margin-left: 17px;
+    }
+  }
+}
