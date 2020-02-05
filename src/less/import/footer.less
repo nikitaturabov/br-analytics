@@ -1,10 +1,13 @@
 .br-footer {
+
   &__left,
   &__right {
+
     flex: 1;
 
     display: flex;
     flex-direction: column;
+
     @media @phone { 
 
       padding: 0 30px;
@@ -12,25 +15,31 @@
   }
 
   &__left {
+
     align-items: flex-start;
 
     padding: 0px 0px 0px 100px;
   }
+
   &__right {
+
     align-items: flex-end;
 
     padding: 0px 100px;
   }
 
   &__check-us {
-    color: #0f2135;
+
+    color: @dark-blue-gray;
     font-size: 22px;
 
     max-width: 523px;
   }
+
   &__news {
+
     font-size: 14px;
-    color: #7f8d9c;
+    color: @bluish-grey;
 
     margin-top: 65px;
 
@@ -44,15 +53,25 @@
 
     width: 100%;
     border-radius: 8px;
-    border: solid 1px #7f8d9c;
+    border: solid 1px @bluish-grey;
     padding: 12px 20px;
     outline: none;
 
-    color: #0f2135;
+    color: @dark-blue-gray;
+
+    &:focus {
+
+      border: solid 1px @dark-pink;
+    }
+
+    &:hover {
+      
+      border: solid 1px @dark-pink;
+    }
 
     &::placeholder {
 
-      color: #7f8d9c;
+      color: @bluish-grey;
     }
 
     @media @phone { 
@@ -73,6 +92,7 @@
   }
 
   &__btns {
+
     display: flex;
     justify-content: flex-start;
 
@@ -82,7 +102,9 @@
   }
 
   &__btn {
+
     &:last-child {
+      
       margin-left: 17px;
     }
   }

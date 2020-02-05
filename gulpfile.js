@@ -1,4 +1,3 @@
-// require("require-dir")("@/gulp-tasks", { recurse: true });
 const gulp = require("gulp");
 const less = require("gulp-less");
 const order = require("gulp-order");
@@ -12,14 +11,11 @@ const filesize = require("gulp-filesize");
 const gutil = require("gulp-util");
 const browserSync = require("browser-sync").create();
 var reload = browserSync.reload;
-
 const nunjucksRender = require("gulp-nunjucks-render");
 const plumber = require("gulp-plumber");
 const filter = require("gulp-filter");
 const debug = require("gulp-debug");
-
 const svgSprite = require("gulp-svg-sprite");
-
 const imagemin = require("gulp-imagemin");
 
 //Сборка less файлов в один css, минификация, перемещение media вниз файла

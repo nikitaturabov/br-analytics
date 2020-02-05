@@ -1,23 +1,68 @@
 .br-cases {
+  
   &__title {
-    margin-left: 100px;
 
     font-size: 30px;
     font-weight: bold;
-    color: #0f2135;
-
-    @media @phone {
-
-      margin-left: 30px;
-    }
+    color: @dark-blue-gray;
   }
 
-  &__carousel {
-    margin-top: 30px;
+  &__title-wrapper {
 
     display: flex;
     justify-content: space-between;
 
-    overflow: auto;
+    margin: 0 100px;
+
+    @media @phone {
+
+      margin: 0 30px;
+    }
+  }
+
+  &__btn-wrapper {
+
+    display: none;
+
+    @media @phone {
+
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__button {
+
+    background: none;
+
+    cursor: pointer;
+
+    &--back {
+
+      svg{
+
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__carousel {
+
+    margin: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+
+    @media @phone {
+
+      margin: 30px;
+
+      overflow: hidden;
+    }
+  }
+
+  &__arrow {
+
+    width: 39px;
+    height: 11px;
   }
 }

@@ -1,5 +1,14 @@
+.svg-arrow {
+	background: url("svg/sprite.css-29586a82.svg") 0 100% no-repeat;
+}
+
+.svg-arrow-dims {
+	width: 39px;
+	height: 13px;
+}
+
 .svg-big-logo {
-	background: url("svg/sprite.css-5d2b678a.svg") 0 0 no-repeat;
+	background: url("svg/sprite.css-29586a82.svg") 0 0 no-repeat;
 }
 
 .svg-big-logo-dims {
@@ -8,7 +17,7 @@
 }
 
 .svg-bird--white {
-	background: url("svg/sprite.css-5d2b678a.svg") 86.61417322834646% 62.5% no-repeat;
+	background: url("svg/sprite.css-29586a82.svg") 86.95652173913044% 86.86868686868686% no-repeat;
 }
 
 .svg-bird--white-dims {
@@ -17,7 +26,7 @@
 }
 
 .svg-burger {
-	background: url("svg/sprite.css-5d2b678a.svg") 100% 49.54128440366973% no-repeat;
+	background: url("svg/sprite.css-29586a82.svg") 97.22222222222223% 73.86363636363636% no-repeat;
 }
 
 .svg-burger-dims {
@@ -26,7 +35,7 @@
 }
 
 .svg-cross {
-	background: url("svg/sprite.css-5d2b678a.svg") 31.192660550458715% 96.96969696969697% no-repeat;
+	background: url("svg/sprite.css-29586a82.svg") 97.9020979020979% 43.58974358974359% no-repeat;
 }
 
 .svg-cross-dims {
@@ -35,7 +44,7 @@
 }
 
 .svg-medium-logo {
-	background: url("svg/sprite.css-5d2b678a.svg") 0 61.36363636363637% no-repeat;
+	background: url("svg/sprite.css-29586a82.svg") 0 80.59701492537313% no-repeat;
 }
 
 .svg-medium-logo-dims {
@@ -44,7 +53,7 @@
 }
 
 .svg-small-logo {
-	background: url("svg/sprite.css-5d2b678a.svg") 0 100% no-repeat;
+	background: url("svg/sprite.css-29586a82.svg") 100% 0 no-repeat;
 }
 
 .svg-small-logo-dims {
