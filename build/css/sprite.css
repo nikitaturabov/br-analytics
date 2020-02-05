@@ -1,0 +1,54 @@
+.svg-big-logo {
+	background: url("svg/sprite.css-5d2b678a.svg") 0 0 no-repeat;
+}
+
+.svg-big-logo-dims {
+	width: 140px;
+	height: 54px;
+}
+
+.svg-bird--white {
+	background: url("svg/sprite.css-5d2b678a.svg") 86.61417322834646% 62.5% no-repeat;
+}
+
+.svg-bird--white-dims {
+	width: 13px;
+	height: 10px;
+}
+
+.svg-burger {
+	background: url("svg/sprite.css-5d2b678a.svg") 100% 49.54128440366973% no-repeat;
+}
+
+.svg-burger-dims {
+	width: 30px;
+	height: 21px;
+}
+
+.svg-cross {
+	background: url("svg/sprite.css-5d2b678a.svg") 31.192660550458715% 96.96969696969697% no-repeat;
+}
+
+.svg-cross-dims {
+	width: 31px;
+	height: 31px;
+}
+
+.svg-medium-logo {
+	background: url("svg/sprite.css-5d2b678a.svg") 0 61.36363636363637% no-repeat;
+}
+
+.svg-medium-logo-dims {
+	width: 110px;
+	height: 42px;
+}
+
+.svg-small-logo {
+	background: url("svg/sprite.css-5d2b678a.svg") 0 100% no-repeat;
+}
+
+.svg-small-logo-dims {
+	width: 34px;
+	height: 34px;
+}
+

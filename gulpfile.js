@@ -23,10 +23,9 @@ const svgSprite = require("gulp-svg-sprite");
 const imagemin = require("gulp-imagemin");
 
 //Сборка less файлов в один css, минификация, перемещение media вниз файла
-gulp.task("less", function() {
+gulp.task("less", function () {
   return gulp
-    .src("./src/less/*.less")
-    .pipe(order(["default.less"]))
+    .src("./src/less/__styles.less")
     .pipe(concat("style.min.less"))
     .pipe(less())
     .pipe(cleanCSS())
@@ -37,7 +36,7 @@ gulp.task("less", function() {
 });
 
 //Для сброки в отдельный js библиотек и расширений
-gulp.task("vendor", function() {
+gulp.task("vendor", function () {
   return gulp
     .src("./src/vendor/*.js")
     .pipe(babel({ presets: ["@babel/preset-env"] }))
@@ -49,7 +48,7 @@ gulp.task("vendor", function() {
 });
 
 //Сборка и оптимизация js
-gulp.task("js", function() {
+gulp.task("js", function () {
   return gulp
     .src("./src/js/*.js")
     .pipe(babel({ presets: ["@babel/preset-env"] }))
@@ -60,7 +59,7 @@ gulp.task("js", function() {
     .on("error", gutil.log);
 });
 
-gulp.task("html", function() {
+gulp.task("html", function () {
   return gulp
     .src(["./src/html/*.html"], {
       since: gulp.lastRun("html")
@@ -76,14 +75,19 @@ gulp.task("html", function() {
     .pipe(gulp.dest("./build/html"));
 });
 
-gulp.task("svgSprite", function() {
+gulp.task("svgSprite", function () {
   return gulp
-    .src("./src/images/*.svg") // svg files for sprite
+    .src("./src/images/*.svg")
     .pipe(
       svgSprite({
         mode: {
           stack: {
-            sprite: "sprite.svg" //sprite file name
+            sprite: "sprite.svg"
+          },
+          css: {
+            render: {
+              css: true
+            }
           }
         }
       })
@@ -91,22 +95,22 @@ gulp.task("svgSprite", function() {
     .pipe(gulp.dest("./build"));
 });
 
-gulp.task("optimizationPNG", function() {
+gulp.task("optimizationPNG", function () {
   return gulp
     .src("./src/img/*")
     .pipe(imagemin([imagemin.optipng({ optimizationLevel: 5 })]))
     .pipe(gulp.dest("./build/img"));
 });
 
-gulp.task("clear-css", function() {
+gulp.task("clear-css", function () {
   return gulp.src("./build/*.css").pipe(clean());
 });
 
-gulp.task("clear-js", function() {
+gulp.task("clear-js", function () {
   return gulp.src("./build/*.js").pipe(clean());
 });
 
-gulp.task("serve", function() {
+gulp.task("serve", function () {
   browserSync.init({
     notify: false, //
     port: 8000, // порт
@@ -116,7 +120,7 @@ gulp.task("serve", function() {
   });
 
   gulp
-    .watch(["src/less/*.less"], gulp.series("clear-css", "less"))
+    .watch(["src/less/*.less", "src/less/import/*.less"], gulp.series("clear-css", "less"))
     .on("change", reload);
   gulp
     .watch(["src/js/*.js"], gulp.series("clear-js", "js"))

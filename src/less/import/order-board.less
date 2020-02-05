@@ -3,6 +3,15 @@
     font-size: 42px;
     color: #0f2135;
     font-weight: bold;
+
+    @media @phone {
+
+      width: 310px;
+
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+    }
   }
 
   &__signature {
@@ -12,6 +21,12 @@
     max-width: 769px;
     text-align: center;
     color: #0f2135;
+
+    @media @phone {
+      
+      font-size: 18px;
+      max-width: 350px;
+    }
   }
 
   &__btn {

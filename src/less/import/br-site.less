@@ -1,5 +1,10 @@
 .br-site {
   &__header {
+
+    transition: all .5s;
+    
+    overflow: hidden;
+    
     max-width: 1366px;
     height: 100px;
     box-shadow: 0 2px 6px 0 rgba(15, 33, 53, 0.2);
@@ -11,6 +16,23 @@
     padding: 0 54px;
 
     margin: 0 auto;
+
+    position: sticky;
+    top: 0;
+
+    @media @phone {
+
+      padding: 0 20px 0 30px;
+      height: 70px;
+
+      overflow: inherit;
+    }
+
+    &--narrow {
+
+      transition: all .5s;
+      height: 70px;
+    }
   }
 
   &__main-block {
@@ -28,5 +50,13 @@
     padding-top: 75px;
     display: flex;
     justify-content: flex-start;
+
+    @media @phone { 
+
+      padding: 35px 0 94px;
+      height: inherit;
+
+      flex-direction: column;
+    }
   }
 }

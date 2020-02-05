@@ -5,6 +5,10 @@
 
     display: flex;
     flex-direction: column;
+    @media @phone { 
+
+      padding: 0 30px;
+    }
   }
 
   &__left {
@@ -29,9 +33,15 @@
     color: #7f8d9c;
 
     margin-top: 65px;
+
+    @media @phone { 
+
+      margin-top: 15px;
+    }
   }
 
   &__email {
+
     width: 100%;
     border-radius: 8px;
     border: solid 1px #7f8d9c;
@@ -41,11 +51,23 @@
     color: #0f2135;
 
     &::placeholder {
+
       color: #7f8d9c;
+    }
+
+    @media @phone { 
+
+      margin-top: 29px;
+      padding: 9px 20px;
+
+      max-width: 520px;
+
+      align-self: flex-start;
     }
   }
 
   &__checkbox {
+
     margin-top: 27px;
     align-self: flex-start;
   }

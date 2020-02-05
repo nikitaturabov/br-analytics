@@ -1,0 +1,114 @@
+.br-header {
+  
+  z-index: 1;
+  &__logo {
+
+    flex-shrink: 0;
+    margin-right: 49px;
+
+    @media @phone {
+
+      &.svg-big-logo-dims{
+        width: 130px;
+        height: 40px;
+        background: url("../stack/sprite.svg#medium-logo") no-repeat;
+      }
+    }
+  }
+  &__menu {
+
+    transition: all .5s;
+
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    @media @phone {
+
+      display: none;
+      height: 100vh;
+      width: 100%;
+
+      padding: 35px;
+
+      background: #0f2135;
+
+      position: absolute;
+      top: 70px;
+      right: 0;
+      border-top: 1px solid #fff;
+
+      &--open{
+
+        display: flex;
+      }
+    }
+
+    &--left {
+
+      transition: all .5s;
+
+      flex: 1;
+    }
+  }
+
+  &__menu-list {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media @phone {
+
+      width: 100%;
+
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      z-index: 10;
+    }
+  }
+
+  &__btn-menu {
+
+    display: none;
+
+    background: none;
+    outline: none;
+
+    cursor: pointer;
+
+    @media @phone {
+
+      display: block;
+    }
+  }
+
+  &__burger {
+
+    width: 30px;
+    height: 21px;
+  }
+
+  &__btn {
+
+    position: absolute;
+    top: 100px;
+    right: 30px;
+
+    @media @phone {
+
+      top: 200px;
+      left: 35px;
+      z-index: 15;
+     }
+
+    &--visible {
+
+       top: 13px;
+    }
+  }
+}
